@@ -1,0 +1,26 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container">
+    <h2>Edit Post</h2>
+    <form action="/save" method="POST" class="edit-form">
+        <div class="mb-3">
+            <label for="postTitle" class="form-label">Title</label>
+            <input type="text" class="form-control" id="postTitle" name="postTitle" value="<%= title %>">
+        </div>
+        <div class="mb-3">
+            <label for="postContent" class="form-label">Content</label>
+            <textarea class="form-control" id="postContent" rows="10" name="postContent"><%= content %></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="postAuthor" class="form-label">Author name</label>
+            <input type="text" class="form-control" id="postAuthor" name="postAuthor" value="<%= author %>">
+        </div>
+        <input name="postId" type="hidden" value="<%= id %>">
+        <div class="form-buttons">
+            <a class="btn btn-secondary me-2" href="/back">Back</a>
+            <button type="submit" class="btn btn-primary">Save</button>                    
+        </div>
+    </form>
+</div>
+
+<%- include("partials/footer.ejs") %>

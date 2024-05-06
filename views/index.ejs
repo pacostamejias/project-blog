@@ -1,0 +1,33 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container posts-container posts-boxes">
+    <%if (locals.posts) {%>
+        <% posts.forEach(element => { %>
+            <div class="mb-3">
+                <div class="post-box row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-lg h-md-250 position-relative">
+                  <div class="col p-4 d-flex flex-column position-static">                      
+                    <h3 class="mb-0"><%= element.title %></h3>
+                    <div class="my-2 text-body-secondary"><%= element.date %></div>
+                    <p class="card-text my-3 fs-5"><%= element.text %></p>
+                    <strong class="d-inline-block mb-3 text-primary-emphasis fst-italic"><%= element.author %></strong>
+                    <div class="d-inline-block">
+                      <a href="/viewPost/<%= element.id %>" class="icon-link icon-link-hover">
+                          Continue reading
+                          <i class="bi bi-chevron-right"></i>
+                      </a>
+                      <a href="/delete/<%= element.id %>" class="icon-link float-end">
+                          <i class="bi bi-trash3-fill"></i>Remove
+                      </a>
+                      <a href="/edit/<%= element.id %>" class="icon-link float-end me-3">
+                        <i class="bi bi-pencil-fill"></i>Edit
+                    </a>
+                    </div>                      
+                  </div>
+                </div>
+              </div>
+        <% }); %>
+    <% } %>
+    
+</div>
+
+<%- include("partials/footer.ejs") %>

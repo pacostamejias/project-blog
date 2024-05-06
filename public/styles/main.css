@@ -1,0 +1,104 @@
+body {
+    background-color: #fff;
+}
+
+header {
+    background-color: #294B29;
+
+    a {
+        color: #fff;
+        border-bottom: 2px dashed #fff;
+    }
+}
+
+footer {
+    /* position: fixed;
+    bottom: 0; */
+    width: 100%;
+    height: 100px;
+    background-color: #294B29;
+    color: #fff;
+}
+
+hr {
+    color: #50623A;
+}
+
+input:focus, textarea:focus{
+    border-color: #789461 !important;
+    box-shadow: 0 0 0 .25rem #b2bbaa !important;
+}
+.btn-primary {
+    background-color: #294B29;
+    border-color: #294B29;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: #294B29;
+    opacity: 0.7;
+}
+
+.btn-secondary {
+    background-color: #789461;
+    border-color: #789461;
+    font-weight: 600;
+}
+
+.btn-secondary:hover {
+    background-color: #789461;
+    opacity: 0.7;
+}
+
+.footer-icon {    
+    color:#fff;
+    font-size: 22px;
+}
+
+.posts-container {
+    min-height: 600px;
+}
+
+.posts-boxes {
+    i {
+        color: #294B29;  
+    }
+
+    a {
+        color: #50623A;
+        text-decoration-color: #50623A;
+    }
+}
+
+.post-box {
+    border: 3px solid #789461 !important;
+}
+
+.create-form, .edit-form {
+    margin: 40px 0;
+    padding: 35px;
+    border: 1px solid #789461;
+    border-radius: 15px;
+    width: 70%;
+
+    label {
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 767.98px) { 
+    .create-form, .edit-form {
+        width: 100%;
+    }
+}
+
+.form-buttons {
+    justify-content: end;
+    display: flex;    
+}
+
+.post-text {
+    padding: 30px 0;
+}
+
+/* https://colorhunt.co/palette/294b2950623a789461dbe7c9 */

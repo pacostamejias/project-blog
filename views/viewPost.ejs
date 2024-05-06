@@ -1,0 +1,14 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container posts-container mt-5">
+    <h1><%= title %></h1>
+    <hr>
+    <p class="post-text my-3 fs-5"><%= content %></p>
+    <% if (locals.author) { %>
+        <strong class="d-block text-primary-emphasis fst-italic">By <%= author %></strong>
+    <% } %>
+    <p class="mb-5 text-body-secondary"><%= date %></p>  
+    <a class="btn btn-secondary" href="/back">Back</a>
+</div>
+
+<%- include("partials/footer.ejs") %>
